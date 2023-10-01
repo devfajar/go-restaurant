@@ -4,8 +4,10 @@ import (
 	"github.com/devfajar/go-restaurant/database"
 	"github.com/devfajar/go-restaurant/middleware"
 	"github.com/devfajar/go-restaurant/routes"
-	"github.com/gin-gonic/gin"
 	"os"
+
+	"github.com/gin-gonic/gin"
+	"go.mongodb.org/mongo-driver/mongo"
 )
 
 var foodCollection *mongo.Collection = database.OpenCollection(database.Client, "food")
